@@ -3,32 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pinch — Spend with intention</title>
-  <meta name="description" content="Pinch helps you stay on top of your spending without the stress. A calm, editorial finance app built around awareness." />
-  <meta property="og:title" content="Pinch — Spend with intention" />
-  <meta property="og:description" content="A calm financial companion that keeps you aware of where your money goes." />
+  <title>Pinch — your money, finally intelligent.</title>
+  <meta name="description" content="Know where your money goes. Pinch is your personal AI financial advisor — log expenses in plain language, get predictions, and stay in control." />
+  <meta property="og:title" content="Pinch — your money, finally intelligent." />
+  <meta property="og:description" content="Log expenses in plain language. Get predictions. Know how much you can spend." />
   <meta property="og:url" content="https://usepinch.app" />
   <meta property="og:type" content="website" />
   <link rel="canonical" href="https://usepinch.app" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --surface:       #f2f0ed;
-      --surface-card:  #ffffff;
-      --surface-dark:  #1a1a1a;
-      --surface-muted: #e5e2de;
-      --content:       #1a1a1a;
-      --content-sec:   #999999;
-      --content-ter:   #bbbbbb;
-      --content-inv:   #ffffff;
-      --success:       #10B981;
-      --radius-card-lg: 24px;
-      --radius-card:    20px;
-      --radius-btn:     9999px;
+      --surface:        #f2f0ed;
+      --surface-card:   #ffffff;
+      --surface-dark:   #1a1a1a;
+      --surface-muted:  #e5e2de;
+      --content:        #1a1a1a;
+      --content-sec:    #999999;
+      --content-ter:    #bbbbbb;
+      --content-inv:    #ffffff;
     }
 
     html { scroll-behavior: smooth; }
@@ -36,9 +32,8 @@
     body {
       background-color: var(--surface);
       color: var(--content);
-      font-family: 'DM Sans', Inter, -apple-system, sans-serif;
+      font-family: 'DM Sans', -apple-system, sans-serif;
       -webkit-font-smoothing: antialiased;
-      min-height: 100vh;
     }
 
     /* ── NAV ── */
@@ -46,31 +41,24 @@
       position: sticky;
       top: 0;
       z-index: 100;
-      background-color: var(--surface);
+      background: var(--surface);
       border-bottom: 1px solid var(--surface-muted);
       padding: 16px 20px;
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
-    .nav-logo {
-      display: flex;
-      align-items: center;
-    }
-    .nav-logo img {
-      width: 32px;
-      height: 32px;
-      border-radius: 8px;
-    }
+    .nav-logo { display: flex; align-items: center; }
+    .nav-logo img { width: 30px; height: 30px; border-radius: 7px; }
     .nav-logo span {
-      font-size: 17px;
+      font-size: 16px;
       font-weight: 700;
       color: var(--content);
-      margin-left: 10px;
+      margin-left: 9px;
       letter-spacing: -0.3px;
     }
     nav a.nav-link {
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 500;
       color: var(--content-sec);
       text-decoration: none;
@@ -79,160 +67,195 @@
 
     /* ── HERO ── */
     .hero {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 72px 20px 56px;
       text-align: center;
-      padding: 80px 20px 64px;
     }
-    .hero-icon-wrap {
-      width: 120px;
-      height: 120px;
-      border-radius: var(--radius-card-lg);
-      background-color: var(--surface-dark);
-      display: flex;
+    .hero-icon {
+      width: 96px;
+      height: 96px;
+      border-radius: 22px;
+      background: var(--surface-dark);
+      display: inline-flex;
       align-items: center;
       justify-content: center;
       box-shadow: 0 8px 32px rgba(0,0,0,0.18);
-      margin-bottom: 32px;
+      margin-bottom: 28px;
       overflow: hidden;
     }
-    .hero-icon-wrap img {
-      width: 120px;
-      height: 120px;
-      display: block;
-    }
-    .hero-label {
+    .hero-icon img { width: 96px; height: 96px; display: block; }
+    .hero-eyebrow {
       font-size: 13px;
       font-weight: 600;
       color: var(--content-sec);
-      letter-spacing: 0.8px;
+      letter-spacing: 0.6px;
       text-transform: uppercase;
-      margin-bottom: 14px;
+      margin-bottom: 16px;
     }
     .hero h1 {
-      font-size: clamp(36px, 6vw, 56px);
+      font-size: clamp(38px, 6.5vw, 60px);
       font-weight: 800;
       color: var(--content);
-      letter-spacing: -2px;
-      line-height: 1.08;
+      letter-spacing: -2.5px;
+      line-height: 1.05;
       margin-bottom: 20px;
-      max-width: 640px;
     }
-    .hero h1 span { color: var(--content-sec); }
-    .hero p {
+    .hero h1 em { font-style: normal; color: var(--content-sec); }
+    .hero-sub {
       font-size: 17px;
       font-weight: 400;
       color: var(--content-sec);
-      max-width: 440px;
       line-height: 1.65;
+      max-width: 420px;
+      margin: 0 auto 36px;
+    }
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
       margin-bottom: 40px;
     }
-    .btn-primary {
+    .btn-dark {
       display: inline-flex;
       align-items: center;
-      background-color: var(--surface-dark);
+      background: var(--surface-dark);
       color: var(--content-inv);
       font-size: 15px;
       font-weight: 600;
-      padding: 14px 28px;
-      border-radius: var(--radius-btn);
+      padding: 13px 24px;
+      border-radius: 9999px;
       text-decoration: none;
       letter-spacing: -0.2px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.15);
       transition: opacity 0.15s;
     }
-    .btn-primary:hover { opacity: 0.85; }
-    .btn-primary svg { margin-right: 8px; }
+    .btn-dark:hover { opacity: 0.82; }
+    .btn-dark svg { margin-right: 7px; flex-shrink: 0; }
+    .social-proof { font-size: 13px; color: var(--content-ter); }
+    .social-proof strong { color: var(--content-sec); font-weight: 600; }
 
-    /* ── DIVIDER ── */
-    .divider {
-      height: 1px;
-      background: var(--surface-muted);
-      margin: 0 20px;
-    }
-
-    /* ── FEATURES ── */
+    /* ── SHARED ── */
     .section {
-      padding: 64px 20px;
-      max-width: 720px;
+      max-width: 680px;
       margin: 0 auto;
+      padding: 56px 20px;
     }
     .section-label {
       font-size: 13px;
       font-weight: 700;
       color: var(--content-sec);
-      letter-spacing: 0.5px;
+      letter-spacing: 0.4px;
       text-transform: lowercase;
-      margin-bottom: 32px;
+      margin-bottom: 28px;
     }
+    .divider { height: 1px; background: var(--surface-muted); margin: 0 20px; }
+
+    /* ── HOW IT WORKS ── */
+    .steps { display: flex; flex-direction: column; }
+    .step {
+      display: grid;
+      grid-template-columns: 48px 1fr;
+      column-gap: 20px;
+      padding: 24px 0;
+      border-bottom: 1px solid var(--surface-muted);
+    }
+    .step:last-child { border-bottom: none; }
+    .step-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      background: var(--surface-card);
+      border: 1px solid var(--surface-muted);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: var(--content-sec);
+    }
+    .step-body h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--content);
+      letter-spacing: -0.3px;
+      margin-bottom: 6px;
+      margin-top: 10px;
+    }
+    .step-body p {
+      font-size: 14px;
+      color: var(--content-sec);
+      line-height: 1.65;
+    }
+
+    /* ── FEATURES GRID ── */
     .features-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 12px;
+      gap: 10px;
     }
-    @media (max-width: 560px) {
-      .features-grid { grid-template-columns: 1fr; }
-    }
-    .feature-card {
+    @media (max-width: 520px) { .features-grid { grid-template-columns: 1fr; } }
+    .feat-card {
       background: var(--surface-card);
-      border-radius: var(--radius-card);
-      padding: 20px;
+      border-radius: 20px;
+      padding: 22px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.04);
     }
-    .feature-icon {
-      width: 40px;
-      height: 40px;
-      border-radius: 14px;
-      background-color: var(--surface-muted);
+    .feat-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 12px;
+      background: var(--surface-muted);
       display: flex;
       align-items: center;
       justify-content: center;
       margin-bottom: 14px;
-      font-size: 18px;
+      color: var(--content-sec);
     }
-    .feature-card h3 {
+    .feat-card h3 {
       font-size: 14px;
       font-weight: 600;
       color: var(--content);
-      margin-bottom: 6px;
+      letter-spacing: -0.2px;
+      margin-bottom: 5px;
     }
-    .feature-card p {
-      font-size: 13px;
-      font-weight: 400;
-      color: var(--content-sec);
-      line-height: 1.6;
-    }
+    .feat-card p { font-size: 13px; color: var(--content-sec); line-height: 1.6; }
 
-    /* ── DARK CARD CTA ── */
+    /* ── DARK CTA ── */
+    .dark-cta-wrap { padding: 0 20px 64px; }
     .dark-cta {
-      background-color: var(--surface-dark);
-      border-radius: var(--radius-card-lg);
-      padding: 40px 32px;
+      background: var(--surface-dark);
+      border-radius: 24px;
+      padding: 44px 32px;
       text-align: center;
-      max-width: 720px;
-      margin: 0 auto 64px;
+      max-width: 680px;
+      margin: 0 auto;
     }
     .dark-cta h2 {
-      font-size: clamp(26px, 4vw, 36px);
+      font-size: clamp(28px, 4.5vw, 40px);
       font-weight: 800;
       color: var(--content-inv);
       letter-spacing: -1.5px;
+      line-height: 1.08;
       margin-bottom: 12px;
-      line-height: 1.1;
     }
-    .dark-cta p {
-      font-size: 15px;
-      color: #888888;
-      margin-bottom: 28px;
-      line-height: 1.6;
-    }
-    .dark-cta .btn-primary {
-      background-color: #ffffff;
+    .dark-cta p { font-size: 15px; color: #888; margin-bottom: 28px; line-height: 1.6; }
+    .btn-light {
+      display: inline-flex;
+      align-items: center;
+      background: #fff;
       color: var(--content);
-      box-shadow: none;
+      font-size: 15px;
+      font-weight: 600;
+      padding: 13px 24px;
+      border-radius: 9999px;
+      text-decoration: none;
+      letter-spacing: -0.2px;
+      transition: opacity 0.15s;
     }
-    .dark-cta .btn-primary:hover { opacity: 0.9; }
+    .btn-light svg { margin-right: 7px; }
+    .btn-light:hover { opacity: 0.88; }
 
     /* ── FOOTER ── */
     footer {
@@ -244,24 +267,16 @@
       flex-wrap: wrap;
       gap: 8px;
     }
-    footer p {
-      font-size: 13px;
-      color: var(--content-ter);
-    }
-    footer a {
-      font-size: 13px;
-      color: var(--content-sec);
-      text-decoration: none;
-    }
+    footer p { font-size: 13px; color: var(--content-ter); }
+    footer a { font-size: 13px; color: var(--content-sec); text-decoration: none; }
     footer a:hover { color: var(--content); }
   </style>
 </head>
 <body>
 
-  <!-- NAV -->
   <nav>
     <div class="nav-logo">
-      <img src="icon.png" alt="Pinch icon" />
+      <img src="icon.png" alt="Pinch" />
       <span>Pinch</span>
     </div>
     <a href="privacy-policy.html" class="nav-link">Privacy Policy</a>
@@ -269,56 +284,132 @@
 
   <!-- HERO -->
   <section class="hero">
-    <div class="hero-icon-wrap">
+    <div class="hero-icon">
       <img src="icon.png" alt="Pinch app icon" />
     </div>
-    <p class="hero-label">Available on the App Store</p>
-    <h1>spend with <span>intention</span></h1>
-    <p>Pinch is a calm financial companion that keeps you aware of where your money goes — without the noise of a traditional budget app.</p>
-    <a href="https://apps.apple.com" class="btn-primary">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
-      </svg>
-      Download on the App Store
-    </a>
+    <p class="hero-eyebrow">Available on the App Store</p>
+    <h1>your money,<br /><em>finally intelligent.</em></h1>
+    <p class="hero-sub">Know where your money goes. Log expenses in plain language, get spending predictions, and talk to an AI advisor that knows your finances.</p>
+    <div class="hero-actions">
+      <a href="https://apps.apple.com" class="btn-dark">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+        </svg>
+        Download on the App Store
+      </a>
+    </div>
+    <p class="social-proof"><strong>4,200 people</strong> already trust Pinch with their finances.</p>
   </section>
+
+  <div class="divider"></div>
+
+  <!-- HOW IT WORKS -->
+  <div class="section">
+    <p class="section-label">how it works</p>
+    <div class="steps">
+
+      <div class="step">
+        <div class="step-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+          </svg>
+        </div>
+        <div class="step-body">
+          <h3>tell it what happened.</h3>
+          <p>No forms. No categories. Just say what you spent — "paid $45 for Uber" or "groceries, $80" — and Pinch takes it from there.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="20" x2="18" y2="10"/>
+            <line x1="12" y1="20" x2="12" y2="4"/>
+            <line x1="6" y1="20" x2="6" y2="14"/>
+          </svg>
+        </div>
+        <div class="step-body">
+          <h3>see everything.</h3>
+          <p>Expenses, income, and goals — always organized, automatically. See your spending by category, track trends month over month, and know exactly where each dollar went.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="3"/>
+            <path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/>
+          </svg>
+        </div>
+        <div class="step-body">
+          <h3>your advisor, always here.</h3>
+          <p>Ask anything. "Can I afford eating out tonight?" "How much did I spend on subscriptions?" Pinch knows your money inside out and answers instantly.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
 
   <div class="divider"></div>
 
   <!-- FEATURES -->
   <div class="section">
-    <p class="section-label">what pinch does</p>
+    <p class="section-label">what you get</p>
     <div class="features-grid">
-      <div class="feature-card">
-        <div class="feature-icon">📊</div>
-        <h3>Daily spending snapshot</h3>
-        <p>Know at a glance how much you've spent today and how that compares to your usual rhythm.</p>
+
+      <div class="feat-card">
+        <div class="feat-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <polyline points="12 6 12 12 16 14"/>
+          </svg>
+        </div>
+        <h3>closing prediction</h3>
+        <p>Know how much you'll have left at month-end — before it's too late to adjust.</p>
       </div>
-      <div class="feature-card">
-        <div class="feature-icon">🎯</div>
-        <h3>Safe to spend</h3>
-        <p>A single number that tells you what's available after bills and recurring expenses are covered.</p>
+
+      <div class="feat-card">
+        <div class="feat-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+          </svg>
+        </div>
+        <h3>spending insights</h3>
+        <p>Spot when a category spikes, see your savings rate, and track month-over-month trends automatically.</p>
       </div>
-      <div class="feature-card">
-        <div class="feature-icon">🔔</div>
-        <h3>Intelligent alerts</h3>
-        <p>Get notified when you're approaching your limits — before it's a problem, not after.</p>
+
+      <div class="feat-card">
+        <div class="feat-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+          </svg>
+        </div>
+        <h3>savings goals</h3>
+        <p>Set goals that adapt to your real spending. Pinch tracks progress and keeps you on course.</p>
       </div>
-      <div class="feature-card">
-        <div class="feature-icon">🪶</div>
-        <h3>Calm by design</h3>
-        <p>No charts overload. No guilt trips. Just quiet, editorial clarity that respects your time.</p>
+
+      <div class="feat-card">
+        <div class="feat-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+            <line x1="9" y1="10" x2="15" y2="10"/>
+            <line x1="9" y1="14" x2="13" y2="14"/>
+          </svg>
+        </div>
+        <h3>english &amp; español</h3>
+        <p>Fully available in English and Spanish. Switch anytime from your profile.</p>
       </div>
+
     </div>
   </div>
 
   <!-- DARK CTA -->
-  <div style="padding: 0 20px;">
+  <div class="dark-cta-wrap">
     <div class="dark-cta">
-      <h2>your money.<br/>your pace.</h2>
-      <p>Join people who want a clearer picture of their finances — without the stress.</p>
-      <a href="https://apps.apple.com" class="btn-primary">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="margin-right:8px;">
+      <h2>your money,<br />under control.</h2>
+      <p>with your personal financial advisor</p>
+      <a href="https://apps.apple.com" class="btn-light">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
           <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
         </svg>
         Get Pinch — Free
@@ -326,7 +417,6 @@
     </div>
   </div>
 
-  <!-- FOOTER -->
   <footer>
     <p>© 2026 Pinch. All rights reserved.</p>
     <a href="privacy-policy.html">Privacy Policy</a>
