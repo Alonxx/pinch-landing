@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Pinch</title>
+  <meta name="description" content="Privacy Policy for the Pinch app." />
+  <link rel="canonical" href="https://usepinch.app/privacy-policy.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --surface:       #f2f0ed;
+      --surface-card:  #ffffff;
+      --surface-dark:  #1a1a1a;
+      --surface-muted: #e5e2de;
+      --content:       #1a1a1a;
+      --content-sec:   #999999;
+      --content-ter:   #bbbbbb;
+      --content-inv:   #ffffff;
+      --radius-card:   20px;
+      --radius-btn:    9999px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background-color: var(--surface);
+      color: var(--content);
+      font-family: 'DM Sans', Inter, -apple-system, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background-color: var(--surface);
+      border-bottom: 1px solid var(--surface-muted);
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+    .nav-logo img {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+    }
+    .nav-logo span {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--content);
+      margin-left: 10px;
+      letter-spacing: -0.3px;
+    }
+
+    /* ── CONTENT ── */
+    .page-wrap {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 56px 20px 80px;
+    }
+
+    .page-label {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--content-sec);
+      letter-spacing: 0.5px;
+      text-transform: lowercase;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-size: clamp(28px, 5vw, 40px);
+      font-weight: 800;
+      color: var(--content);
+      letter-spacing: -1.5px;
+      line-height: 1.1;
+      margin-bottom: 8px;
+    }
+
+    .meta {
+      font-size: 13px;
+      color: var(--content-ter);
+      margin-bottom: 48px;
+    }
+
+    .policy-card {
+      background: var(--surface-card);
+      border-radius: var(--radius-card);
+      padding: 28px 28px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      margin-bottom: 12px;
+    }
+
+    .policy-card h2 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--content);
+      letter-spacing: -0.3px;
+      margin-bottom: 12px;
+    }
+
+    .policy-card p {
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--content-sec);
+      line-height: 1.75;
+      margin-bottom: 10px;
+    }
+    .policy-card p:last-child { margin-bottom: 0; }
+
+    .policy-card ul {
+      padding-left: 20px;
+      margin-top: 8px;
+      margin-bottom: 10px;
+    }
+    .policy-card ul li {
+      font-size: 14px;
+      color: var(--content-sec);
+      line-height: 1.75;
+      margin-bottom: 4px;
+    }
+
+    .contact-card {
+      background: var(--surface-dark);
+      border-radius: var(--radius-card);
+      padding: 28px;
+      margin-bottom: 12px;
+    }
+    .contact-card h2 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--content-inv);
+      letter-spacing: -0.3px;
+      margin-bottom: 12px;
+    }
+    .contact-card p {
+      font-size: 14px;
+      color: #888888;
+      line-height: 1.75;
+      margin-bottom: 8px;
+    }
+    .contact-card p:last-child { margin-bottom: 0; }
+    .contact-card a {
+      color: #cccccc;
+      text-decoration: none;
+    }
+    .contact-card a:hover { color: var(--content-inv); }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid var(--surface-muted);
+      padding: 24px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    footer p { font-size: 13px; color: var(--content-ter); }
+    footer a { font-size: 13px; color: var(--content-sec); text-decoration: none; }
+    footer a:hover { color: var(--content); }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" class="nav-logo">
+      <img src="icon.png" alt="Pinch icon" />
+      <span>Pinch</span>
+    </a>
+  </nav>
+
+  <!-- CONTENT -->
+  <div class="page-wrap">
+    <p class="page-label">legal</p>
+    <h1>privacy policy</h1>
+    <p class="meta">Last updated: March 25, 2026</p>
+
+    <div class="policy-card">
+      <h2>1. Introduction</h2>
+      <p>Welcome to Pinch ("we," "our," or "us"). We are committed to protecting your personal information and your right to privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application Pinch (the "App").</p>
+      <p>Please read this policy carefully. If you disagree with its terms, please discontinue use of the App.</p>
+    </div>
+
+    <div class="policy-card">
+      <h2>2. Information We Collect</h2>
+      <p>We may collect information in the following ways:</p>
+      <p><strong style="color: var(--content);">Information you provide directly:</strong></p>
+      <ul>
+        <li>Account registration details (e.g., name, email address)</li>
+        <li>Financial data you manually enter (budgets, spending categories, transactions)</li>
+        <li>Preferences and settings you configure within the App</li>
+      </ul>
+      <p><strong style="color: var(--content);">Information collected automatically:</strong></p>
+      <ul>
+        <li>Device information (device type, operating system version, unique device identifiers)</li>
+        <li>Usage data (features used, session duration, crash reports)</li>
+        <li>Log data (IP address, access times, app diagnostics)</li>
+      </ul>
+    </div>
+
+    <div class="policy-card">
+      <h2>3. How We Use Your Information</h2>
+      <p>We use the information we collect to:</p>
+      <ul>
+        <li>Provide, operate, and maintain the App and its features</li>
+        <li>Personalize your experience and deliver relevant content</li>
+        <li>Process transactions and manage your account</li>
+        <li>Send you service-related communications (updates, security alerts)</li>
+        <li>Analyze usage patterns to improve the App's performance and design</li>
+        <li>Detect, prevent, and address technical issues or fraudulent activity</li>
+        <li>Comply with legal obligations</li>
+      </ul>
+    </div>
+
+    <div class="policy-card">
+      <h2>4. Sharing of Your Information</h2>
+      <p>We do not sell, trade, or rent your personal information to third parties. We may share your information only in the following limited circumstances:</p>
+      <ul>
+        <li><strong style="color: var(--content);">Service providers:</strong> Trusted third-party vendors who assist us in operating the App (e.g., cloud hosting, analytics), bound by confidentiality obligations.</li>
+        <li><strong style="color: var(--content);">Legal requirements:</strong> When required by law, court order, or governmental authority.</li>
+        <li><strong style="color: var(--content);">Business transfers:</strong> In connection with a merger, acquisition, or sale of assets, with notice provided to you.</li>
+        <li><strong style="color: var(--content);">Protection of rights:</strong> To protect the rights, property, or safety of Pinch, our users, or the public.</li>
+      </ul>
+    </div>
+
+    <div class="policy-card">
+      <h2>5. Data Retention</h2>
+      <p>We retain your personal information for as long as necessary to provide you with the App's services and fulfill the purposes described in this policy, unless a longer retention period is required or permitted by law.</p>
+      <p>When you delete your account, we will delete or anonymize your personal information within 30 days, except where retention is required by legal obligations.</p>
+    </div>
+
+    <div class="policy-card">
+      <h2>6. Security</h2>
+      <p>We implement industry-standard technical and organizational security measures to protect your information from unauthorized access, alteration, disclosure, or destruction. These include encryption in transit (TLS) and at rest, access controls, and regular security reviews.</p>
+      <p>However, no method of electronic storage or transmission over the internet is 100% secure. We cannot guarantee absolute security and encourage you to use strong, unique passwords and keep your device software up to date.</p>
+    </div>
+
+    <div class="policy-card">
+      <h2>7. Your Rights</h2>
+      <p>Depending on your location, you may have the following rights regarding your personal information:</p>
+      <ul>
+        <li><strong style="color: var(--content);">Access:</strong> Request a copy of the personal data we hold about you.</li>
+        <li><strong style="color: var(--content);">Correction:</strong> Request correction of inaccurate or incomplete data.</li>
+        <li><strong style="color: var(--content);">Deletion:</strong> Request deletion of your personal data ("right to be forgotten").</li>
+        <li><strong style="color: var(--content);">Portability:</strong> Request your data in a structured, machine-readable format.</li>
+        <li><strong style="color: var(--content);">Objection:</strong> Object to certain types of data processing.</li>
+        <li><strong style="color: var(--content);">Withdrawal of consent:</strong> Where processing is based on consent, you may withdraw it at any time.</li>
+      </ul>
+      <p>To exercise any of these rights, please contact us at the email address listed below.</p>
+    </div>
+
+    <div class="policy-card">
+      <h2>8. Children's Privacy</h2>
+      <p>The App is not directed to children under the age of 13 (or the applicable age of digital consent in your jurisdiction). We do not knowingly collect personal information from children. If we learn that we have collected such information, we will promptly delete it. If you believe we have inadvertently collected information from a child, please contact us immediately.</p>
+    </div>
+
+    <div class="policy-card">
+      <h2>9. Third-Party Links and Services</h2>
+      <p>The App may contain links to third-party websites or integrate with third-party services (e.g., your bank or financial institution). This Privacy Policy does not apply to those third parties. We encourage you to review the privacy policies of any third-party services you access.</p>
+    </div>
+
+    <div class="policy-card">
+      <h2>10. Changes to This Policy</h2>
+      <p>We may update this Privacy Policy from time to time to reflect changes in our practices or for legal, operational, or regulatory reasons. We will notify you of any material changes by updating the "Last updated" date at the top of this page and, where appropriate, through an in-app notification.</p>
+      <p>Continued use of the App after changes become effective constitutes your acceptance of the revised policy.</p>
+    </div>
+
+    <div class="contact-card">
+      <h2>11. Contact Us</h2>
+      <p>If you have questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us:</p>
+      <p><strong style="color: var(--content-inv);">Pinch</strong></p>
+      <p>Email: <a href="mailto:support@usepinch.app">support@usepinch.app</a></p>
+      <p>We will respond to your inquiry within 30 days.</p>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Pinch. All rights reserved.</p>
+    <a href="index.html">← Back to home</a>
+  </footer>
+
+</body>
+</html>
