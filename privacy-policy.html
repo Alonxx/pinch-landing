@@ -188,7 +188,7 @@
   <div class="page-wrap">
     <p class="page-label">legal</p>
     <h1>privacy policy</h1>
-    <p class="meta">Last updated: March 25, 2026</p>
+    <p class="meta">Last updated: March 26, 2026</p>
 
     <div class="policy-card">
       <h2>1. Introduction</h2>
@@ -210,6 +210,7 @@
         <li>Device information (device type, operating system version, unique device identifiers)</li>
         <li>Usage data (features used, session duration, crash reports)</li>
         <li>Log data (IP address, access times, app diagnostics)</li>
+        <li>Session recordings: approximately 20% of user sessions are recorded using Mixpanel Session Replay. These recordings may capture screen interactions, taps, and navigation flows within the App. Financial data fields are masked and excluded from recordings.</li>
       </ul>
     </div>
 
@@ -270,8 +271,23 @@
     </div>
 
     <div class="policy-card">
-      <h2>9. Third-Party Links and Services</h2>
-      <p>The App may contain links to third-party websites or integrate with third-party services (e.g., your bank or financial institution). This Privacy Policy does not apply to those third parties. We encourage you to review the privacy policies of any third-party services you access.</p>
+      <h2>9. Third-Party Services and Sub-Processors</h2>
+      <p>The App integrates with the following third-party services that may process your data on our behalf:</p>
+      <ul>
+        <li>
+          <strong style="color: var(--content);">Mixpanel (Analytics &amp; Session Replay):</strong> We use Mixpanel to analyze how users interact with the App and to record a sample of sessions (approximately 20% of sessions) via Mixpanel Session Replay. Session recordings may capture taps, navigation flows, and screen content. We configure Mixpanel to mask sensitive financial fields so they are not captured. Data is processed by Mixpanel, Inc. in accordance with their <a href="https://mixpanel.com/legal/privacy-policy/" target="_blank" rel="noopener" style="color: var(--content); font-weight: 600;">Privacy Policy</a>.
+        </li>
+        <li>
+          <strong style="color: var(--content);">Groq (AI Infrastructure):</strong> The AI-powered features of the App — including the conversational advisor and natural language expense logging — are powered by Groq, Inc. When you interact with the AI advisor, the content of your messages and relevant financial context is transmitted to Groq's API to generate responses. Groq processes this data in accordance with their <a href="https://groq.com/privacy-policy/" target="_blank" rel="noopener" style="color: var(--content); font-weight: 600;">Privacy Policy</a>. We do not use your data to train third-party AI models.
+        </li>
+        <li>
+          <strong style="color: var(--content);">Supabase (Backend &amp; Database):</strong> Your account data and financial records are stored securely using Supabase, which provides our backend infrastructure and database services.
+        </li>
+        <li>
+          <strong style="color: var(--content);">RevenueCat (Subscription Management):</strong> In-app purchases and subscription status are managed through RevenueCat, which processes transaction metadata to validate and manage your Pro subscription.
+        </li>
+      </ul>
+      <p>The App may also contain links to third-party websites. This Privacy Policy does not apply to those external sites. We encourage you to review the privacy policies of any third-party services you access.</p>
     </div>
 
     <div class="policy-card">
@@ -281,7 +297,7 @@
     </div>
 
     <div class="contact-card">
-      <h2>11. Contact Us</h2>
+      <h2>12. Contact Us</h2>
       <p>If you have questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us:</p>
       <p><strong style="color: var(--content-inv);">Pinch</strong></p>
       <p>Email: <a href="mailto:support@usepinch.app">support@usepinch.app</a></p>
